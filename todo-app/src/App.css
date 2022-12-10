@@ -5,9 +5,11 @@
     align-items: center;
 }
 .mainDiv{
-    width: 95%;
+    width: 90%;
     margin: auto;
     background: #ffffff;
     border-radius: 30px;
     height:90%;
+    display: flex;
+    padding: 20px;
 }
