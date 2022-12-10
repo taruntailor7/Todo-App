@@ -1,0 +1,22 @@
+.sidebar{
+    width: 20%;
+    border-right: 2px solid #ccc;
+    /* padding: 0 20px;
+    display: flex;
+    flex-direction:column;
+    height: 100vh; */
+}
+/* .sidebarLogo{
+    border: 1px solid black;
+    width: 100%;
+    height:60px;
+    margin-top: 50px;
+}
+.sidebarLogo>img{
+    width:20%;
+    height:100%;
+}
+.sidebarList{
+    width: 100%;
+    border: 1px solid black;
+} */
