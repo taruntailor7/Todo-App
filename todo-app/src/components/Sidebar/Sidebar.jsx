@@ -6,13 +6,20 @@ import { NavLink } from "react-router-dom"
       textDecoration: "none",
       color:"gray",
     };
-
     const active = {
         padding:"20px",
         borderRadius: "10px",
         textDecoration: "none",
-        color: "white",
+        color: "#ffb000",
         backgroundColor: "black"
+    };
+
+    const logout = {
+      padding:"20px",
+      textDecoration: "none",
+      color:"white",
+      borderRadius: "10px",
+      backgroundColor: "#5876d8"
     };
 
     const links = [
@@ -21,7 +28,11 @@ import { NavLink } from "react-router-dom"
         title: "Profile"
       },
       {
-        to:"/",
+        to:"/createtask",
+        title: "Create Task"
+      },
+      {
+        to:"/alltasks",
         title: "All Tasks"
       },
       {
@@ -41,10 +52,12 @@ import { NavLink } from "react-router-dom"
 export const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="sidebarLogo">
-        <img src="https://static.c.realme.com/IN/thread/1164218646675849216.png" alt="" />
-        <h1>Taskdly</h1>
-      </div>
+      <NavLink to="/" className="sidebarLogo">
+        {/* <div > */}
+          <img src="https://static.c.realme.com/IN/thread/1164218646675849216.png" alt="" />
+          <h1>Taskdly</h1>
+        {/* </div> */}
+      </NavLink>
     
       <div className="sidebarList">
         {links.map((link)=>(
@@ -52,7 +65,7 @@ export const Sidebar = () => {
             {link.title}  
           </NavLink>
         ))}
-        <NavLink style={defaults}>
+        <NavLink style={logout}>
           Login/Logout 
         </NavLink>
       </div>

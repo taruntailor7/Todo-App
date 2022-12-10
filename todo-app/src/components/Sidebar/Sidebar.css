@@ -10,6 +10,8 @@
     width: 100%;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: black;
 }
 .sidebarLogo>img{
     width:60px;
@@ -18,7 +20,7 @@
 }
 .sidebarList{
     width: 100%;
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 20px;
     display: flex;
     flex-direction: column;
