@@ -1,4 +1,4 @@
-import {LOGIN} from "./action"
+import {LOGIN, LOGOUT} from "./action"
 
 const initState = {
     token : localStorage.getItem("token") || null,
@@ -13,6 +13,12 @@ const loginReducer = (state=initState, {type, payload}) =>{
                 loggedInUser:payload.user
             };
         }
+        case LOGOUT : {
+            return {
+                token:null,
+                loggedInUser:null
+            };
+        }   
         default: {
             return state
         }
