@@ -1,6 +1,10 @@
-import { useState } from "react"
-import "./Register.css"
-import { NavLink } from "react-router-dom"
+import { useState } from "react";
+import "./Register.css";
+import { NavLink, useNavigate } from "react-router-dom";
+// import axios from "axios";
+import { useDispatch } from 'react-redux'
+import { getRegister } from "../../redux/Auth/action.js";
+
 
 let initstate = {
     name:"",
@@ -10,15 +14,18 @@ let initstate = {
 
 export const Register = () => {
     const [user, setUser] = useState(initstate);
+    const navigate = useNavigate();
+    const dispatch = useDispatch()
 
     const handleChange = (e) =>{
         let {name, value} = e.target;
         setUser({...user, [name]:value});
     }
-    console.log(user,"user")
     
-    const handleSubmit = ()=>{
-        
+    const handleSubmit = async (e)=>{
+        e.preventDefault();
+        dispatch(getRegister(user));
+        navigate("/login")
     }
     
     return (

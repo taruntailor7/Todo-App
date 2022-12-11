@@ -1,6 +1,7 @@
 import "./Sidebar.css"
 import { NavLink } from "react-router-dom"
 import {FiLogOut} from "react-icons/fi"
+import { useSelector } from "react-redux";
 
     const defaults = {
       padding:"20px",
@@ -53,7 +54,7 @@ import {FiLogOut} from "react-icons/fi"
     ] 
 
 export const Sidebar = () => {
-  let user = false; 
+  const {loggedInUser} = useSelector((state)=>state)
 
   return (
     <div className="sidebar">
@@ -70,7 +71,7 @@ export const Sidebar = () => {
             {link.title}  
           </NavLink>
         ))}
-        {user ? <NavLink style={logout}><FiLogOut className="logIcon"/> Logout </NavLink> : <NavLink to="/login" style={logout}><FiLogOut className="logIcon"/> Login </NavLink>}
+        {loggedInUser ? <NavLink style={logout}><FiLogOut className="logIcon"/> Logout </NavLink> : <NavLink to="/login" style={logout}><FiLogOut className="logIcon"/> Login </NavLink>}
       </div>
     </div>
   )

@@ -55,7 +55,8 @@ router.post('/login',async (req, res) => {
             if(match){
                 let token = jwt.sign({
                     _id : userExists._id,
-                    email: userExists.email
+                    email: userExists.email,
+                    name: userExists.name
                 },JWT_SECRET)
 
                 // console.log(token,"token")
@@ -71,8 +72,8 @@ router.post('/login',async (req, res) => {
                 return res.send({
                     error:false,
                     message:"User succesfully logged in!",
-                    data : token,
-                    user:userExists
+                    token : token,
+                    user:result
                 })
 
             } else {
