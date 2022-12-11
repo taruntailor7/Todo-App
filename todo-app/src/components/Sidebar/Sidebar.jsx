@@ -50,6 +50,8 @@ import { NavLink } from "react-router-dom"
     ] 
 
 export const Sidebar = () => {
+  let user = true; 
+
   return (
     <div className="sidebar">
       <NavLink to="/" className="sidebarLogo">
@@ -65,9 +67,7 @@ export const Sidebar = () => {
             {link.title}  
           </NavLink>
         ))}
-        <NavLink style={logout}>
-          Login/Logout 
-        </NavLink>
+        {user ? <NavLink style={logout}>Logout</NavLink> : <NavLink style={logout}>Login</NavLink>}
       </div>
     </div>
   )
