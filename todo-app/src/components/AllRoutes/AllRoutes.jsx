@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router"
 import { Home } from "../../pages/Home/Home"
+import { Login } from "../../pages/Login/Login"
 import "./AllRoutes.css"
 
 export const AllRoutes = () => {
@@ -11,6 +12,7 @@ export const AllRoutes = () => {
       <Route path="/personal" element></Route>
       <Route path="/official" element></Route>
       <Route path="/others" element></Route>
+      <Route path="/login" element={<Login/>}></Route>
     </Routes>
   )
 }

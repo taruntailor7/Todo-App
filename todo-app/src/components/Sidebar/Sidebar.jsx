@@ -50,7 +50,7 @@ import { NavLink } from "react-router-dom"
     ] 
 
 export const Sidebar = () => {
-  let user = true; 
+  let user = false; 
 
   return (
     <div className="sidebar">
@@ -67,7 +67,7 @@ export const Sidebar = () => {
             {link.title}  
           </NavLink>
         ))}
-        {user ? <NavLink style={logout}>Logout</NavLink> : <NavLink style={logout}>Login</NavLink>}
+        {user ? <NavLink style={logout}>Logout</NavLink> : <NavLink to="/login" style={logout}>Login</NavLink>}
       </div>
     </div>
   )
