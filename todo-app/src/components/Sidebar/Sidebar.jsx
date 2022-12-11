@@ -1,5 +1,6 @@
 import "./Sidebar.css"
 import { NavLink } from "react-router-dom"
+import {FiLogOut} from "react-icons/fi"
 
     const defaults = {
       padding:"20px",
@@ -19,7 +20,9 @@ import { NavLink } from "react-router-dom"
       textDecoration: "none",
       color:"white",
       borderRadius: "10px",
-      backgroundColor: "#5876d8"
+      backgroundColor: "#5876d8",
+      display:"flex",
+      alignItems: "center",
     };
 
     const links = [
@@ -67,7 +70,7 @@ export const Sidebar = () => {
             {link.title}  
           </NavLink>
         ))}
-        {user ? <NavLink style={logout}>Logout</NavLink> : <NavLink to="/login" style={logout}>Login</NavLink>}
+        {user ? <NavLink style={logout}><FiLogOut className="logIcon"/> Logout </NavLink> : <NavLink to="/login" style={logout}><FiLogOut className="logIcon"/> Login </NavLink>}
       </div>
     </div>
   )
