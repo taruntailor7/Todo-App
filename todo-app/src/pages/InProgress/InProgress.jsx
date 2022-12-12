@@ -1,28 +1,19 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import "./AllTasks.css"
+import "./InProgress.css"
 
-export const AllTasks = () => {
+export const InProgress = () => {
     const [tasks, setTasks] = useState([])
 
     useEffect(()=>{
         axios.get("http://localhost:3001/tasks")
         .then((response)=>setTasks(response.data))
     },[])
-
-    const handleChange = (e) =>{
-
-    }
+    console.log(tasks)
     
     return (
         <div className="allTasks">
             <h1 className="yourTask">Your Tasks</h1>
-            <select  id="" name="category" placeholder="Select" onChange={handleChange} value="" required>
-                <option value="">Filter task by category</option>
-                <option value="personal">Personal</option>
-                <option value="official">Official</option>
-                <option value="others">Others</option>
-            </select>
             <table>
                 <thead border="1" cellSpacing="">
                     <tr>
