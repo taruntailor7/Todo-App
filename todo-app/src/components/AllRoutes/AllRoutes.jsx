@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router"
 import { AllTasks } from "../../pages/AllTasks/AllTasks"
 import { CreateTask } from "../../pages/CreateTask/CreateTask"
+import { Done } from "../../pages/Done/Done"
 import { Home } from "../../pages/Home/Home"
 import { InProgress } from "../../pages/InProgress/InProgress"
 import { Login } from "../../pages/Login/Login"
@@ -14,7 +15,7 @@ export const AllRoutes = () => {
       <Route path="/profile" element></Route>
       <Route path="/alltasks" element={<AllTasks />}></Route>
       <Route path="/progress" element={<InProgress />}></Route>
-      <Route path="/done" element></Route>
+      <Route path="/done" element={<Done />}></Route>
       <Route path="/login" element={<Login/>}></Route>
       <Route path="/createtask" element={<CreateTask/>}></Route>
       <Route path="/register" element={<Register/>}></Route>

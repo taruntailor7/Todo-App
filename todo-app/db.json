@@ -1,62 +1,97 @@
 {
-  "tasks": [
+  "tasks": [],
+  "progress": [],
+  "done": [
     {
       "name": "ewefe",
       "date": "2022-12-12",
       "desc": "wedce",
       "category": "others",
       "id": 1
-    }
-  ],
-  "progress": [
-    {
-      "name": "Shakti",
-      "date": "2022-12-12",
-      "desc": "niuuyu",
-      "category": "personal",
-      "id": 1
-    },
-    {
-      "name": "frg",
-      "date": "2022-12-01",
-      "desc": "ewfers",
-      "category": "others",
-      "id": 2
-    },
-    {
-      "name": "sdvc",
-      "date": "2022-12-12",
-      "desc": "cs",
-      "category": "personal",
-      "id": 3
-    },
-    {
-      "name": "sfcer",
-      "date": "2022-12-10",
-      "desc": "edcf",
-      "category": "personal",
-      "id": 4
-    },
-    {
-      "name": "sc",
-      "date": "2022-12-03",
-      "desc": "sdce",
-      "category": "official",
-      "id": 5
     },
     {
       "name": "esff",
       "date": "2022-12-08",
       "desc": "dew",
       "category": "official",
+      "id": 2
+    },
+    {
+      "name": "sc",
+      "date": "2022-12-03",
+      "desc": "sdce",
+      "category": "official",
+      "id": 3
+    },
+    {
+      "name": "Shakti",
+      "date": "2022-12-12",
+      "desc": "niuuyu",
+      "category": "personal",
+      "id": 4
+    },
+    {
+      "name": "Shakti",
+      "date": "2022-12-12",
+      "desc": "niuuyu",
+      "category": "personal",
+      "id": 5
+    },
+    {
+      "name": "frg",
+      "date": "2022-12-01",
+      "desc": "ewfers",
+      "category": "others",
       "id": 6
+    },
+    {
+      "name": "sfcer",
+      "date": "2022-12-10",
+      "desc": "edcf",
+      "category": "personal",
+      "id": 7
+    },
+    {
+      "name": "sdvc",
+      "date": "2022-12-12",
+      "desc": "cs",
+      "category": "personal",
+      "id": 8
+    },
+    {
+      "name": "sfcer",
+      "date": "2022-12-10",
+      "desc": "edcf",
+      "category": "personal",
+      "id": 9
+    },
+    {
+      "name": "grtb",
+      "date": "2022-12-12",
+      "desc": "rgrt",
+      "category": "official",
+      "id": 10
     },
     {
       "name": "ewefe",
       "date": "2022-12-12",
       "desc": "wedce",
       "category": "others",
-      "id": 7
+      "id": 11
+    },
+    {
+      "name": "grtb",
+      "date": "2022-12-12",
+      "desc": "rgrt",
+      "category": "official",
+      "id": 12
+    },
+    {
+      "name": "grtb",
+      "date": "2022-12-12",
+      "desc": "rgrt",
+      "category": "official",
+      "id": 13
     }
   ]
 }

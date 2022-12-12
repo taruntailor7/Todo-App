@@ -20,7 +20,9 @@ export const AllTasks = () => {
             delete task.data.id;
 
             axios.post("http://localhost:3001/progress", task.data)
+            
             axios.delete(`http://localhost:3001/tasks/${id}`)
+            
             tasks.splice(index,1)
             setTasks([...tasks])
         } catch (error) {
