@@ -40,16 +40,12 @@ import { useDispatch, useSelector } from "react-redux";
         title: "All Tasks"
       },
       {
-        to:"/personal",
-        title: "Personal"
+        to:"/progress",
+        title: "In-Progress"
       },
       {
-        to:"/official",
-        title: "Official"
-      },
-      {
-        to:"/others",
-        title: "Others"
+        to:"/done",
+        title: "Done"
       }
     ] 
 
