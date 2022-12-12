@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import "./AllTasks.css"
 
 export const AllTasks = () => {
-    const [tasks, setTasks] = useState([])
+    const [tasks, setTasks] = useState([]);
 
     useEffect(()=>{
         axios.get("http://localhost:3001/tasks")
@@ -13,12 +13,16 @@ export const AllTasks = () => {
     const handleChange = (e) =>{
 
     }
-    const handleClick = async (id)=>{
+
+    const handleClick = async (id,index)=>{
         try {
             let task = await axios.get(`http://localhost:3001/tasks/${id}`)
-            // console.log(task.data)
+            delete task.data.id;
+
             axios.post("http://localhost:3001/progress", task.data)
             axios.delete(`http://localhost:3001/tasks/${id}`)
+            tasks.splice(index,1)
+            setTasks([...tasks])
         } catch (error) {
             console.log(error)
         }   
@@ -45,13 +49,13 @@ export const AllTasks = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {tasks.map((task)=>(
+                    {tasks.map((task,index) =>(
                         <tr key={task.id}>
                             <td>{task.id}</td>
                             <td>{task.name}</td>
                             <td>{task.date}</td>
                             <td>{task.category}</td>
-                            <td className="inProgress" onClick={()=>handleClick(task.id)}>Move</td>
+                            <td className="inProgress" onClick={()=>handleClick(task.id,index)}>Move</td>
                             <td>Delete</td>
                         </tr>
                     ))}
