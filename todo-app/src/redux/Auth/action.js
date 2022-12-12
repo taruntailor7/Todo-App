@@ -18,7 +18,7 @@ export const logout = ()=>(
 
 export const getRegister = (user)=> async()=>{
     try {
-        let res = await axios.post("http://localhost:3050/auth/register",user)
+        let res = await axios.post("https://todo-pmem.onrender.com/auth/register",user)
         alert(res.data.message)
     } catch (error) {
         console.log(error)
@@ -27,7 +27,7 @@ export const getRegister = (user)=> async()=>{
 
 export const getLogin = (user)=> async(dispatch)=>{
     try {
-        let res = await axios.post("http://localhost:3050/auth/login",user)
+        let res = await axios.post("https://todo-pmem.onrender.com/auth/login",user)
         alert(res.data.message)
         dispatch(login(res.data.token,res.data.user))
         localStorage.setItem("token",res.data.token);
