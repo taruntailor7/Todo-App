@@ -5,7 +5,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux'
 import { getRegister } from "../../redux/Auth/action.js";
 
-
 let initstate = {
     name:"",
     email: "",
@@ -15,7 +14,7 @@ let initstate = {
 export const Register = () => {
     const [user, setUser] = useState(initstate);
     const navigate = useNavigate();
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     const handleChange = (e) =>{
         let {name, value} = e.target;

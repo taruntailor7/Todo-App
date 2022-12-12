@@ -19,7 +19,6 @@ export const logout = ()=>(
 export const getRegister = (user)=> async()=>{
     try {
         let res = await axios.post("http://localhost:3050/auth/register",user)
-        // console.log(res.data.data,"res")
         alert(res.data.message)
     } catch (error) {
         console.log(error)
