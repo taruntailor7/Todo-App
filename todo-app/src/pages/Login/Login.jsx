@@ -15,7 +15,6 @@ export const Login = () => {
     const navigate = useNavigate();
     // const {token} = useSelector((state)=>state)
 
-
     const handleChange = (e) =>{
         let {name, value} = e.target;
         setUser({...user, [name]:value});
