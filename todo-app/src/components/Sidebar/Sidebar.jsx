@@ -59,7 +59,7 @@ export const Sidebar = () => {
   const handleLogout = ()=>{
     localStorage.setItem("token",null)
     localStorage.setItem("loggedInUser",null)
-    alert("Successfully logged out!")
+    alert("Successfully logged <out!></out!>")
     navigate("/");
     dispatch(logout());
   }
