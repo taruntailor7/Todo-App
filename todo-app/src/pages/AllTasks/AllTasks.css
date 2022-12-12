@@ -6,8 +6,14 @@
 table{
     width: 100%;
     text-align: center;
-    /* margin-top:-200px; */
+    margin-top:10px;
 }
 table,th,td{
     border: 1px solid black;    
+}
+.yourTask{
+    margin-top:-280px;
+}
+.moveBtn{
+    width: 100%;
 }

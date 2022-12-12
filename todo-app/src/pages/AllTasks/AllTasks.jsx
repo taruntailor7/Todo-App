@@ -10,11 +10,20 @@ export const AllTasks = () => {
         .then((response)=>setTasks(response.data))
     },[])
     console.log(tasks)
+
+    const handleChange = (e) =>{
+
+    }
     
     return (
         <div className="allTasks">
-             <h1>Your Tasks</h1>
-           
+            <h1 className="yourTask">Your Tasks</h1>
+            <select  id="" name="category" placeholder="Select" onChange={handleChange} value="" required>
+                <option value="">Filter task by category</option>
+                <option value="personal">Personal</option>
+                <option value="official">Official</option>
+                <option value="others">Others</option>
+            </select>
             <table>
                 <thead border="1" cellSpacing="">
                     <tr>
@@ -33,7 +42,7 @@ export const AllTasks = () => {
                             <td>{task.name}</td>
                             <td>{task.date}</td>
                             <td>{task.category}</td>
-                            <td>Move</td>
+                            <td><button className="moveBtn">Move</button></td>
                             <td>Delete</td>
                         </tr>
                     ))}
