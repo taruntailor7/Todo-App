@@ -18,14 +18,13 @@ export const InProgress = () => {
             axios.post("http://localhost:3001/done", task.data)
 
             axios.delete(`http://localhost:3001/progress/${id}`)
-            
+
             tasks.splice(index,1)
             setTasks([...tasks])
         } catch (error) {
             console.log(error)
         }   
     }
-    
     return (
         <div className="allTasks">
             <h1 className="yourTask">Your Tasks</h1>

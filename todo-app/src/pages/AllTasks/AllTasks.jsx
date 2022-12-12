@@ -32,7 +32,6 @@ export const AllTasks = () => {
             console.log(error)
         }   
     }
-    
     return (
         <div className="allTasks">
             <h1 className="yourTask">Your Tasks</h1>
