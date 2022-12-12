@@ -1,0 +1,14 @@
+.createTaskHeading{
+    text-align: start;
+    margin-left: 20px;
+}
+textarea{
+    border-radius: 10px;
+    border:1px solid #ccc;
+    padding: 10px;
+}
+select{
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+}
