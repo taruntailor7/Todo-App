@@ -1,5 +1,7 @@
 import { useState } from "react"
 import "./CreateTask.css"
+import axios from "axios"
+import { useNavigate } from "react-router"
 
 let initState = {
     name:"",
@@ -10,15 +12,19 @@ let initState = {
 
 export const CreateTask = () => {
     const [task, setTask] = useState(initState)
+    const navigate = useNavigate();
 
     const handleChange = (e)=>{
         const {name, value} = e.target
         setTask({...task, [name]:value})
     }
-    console.log(task,"task")
-    
+
     const handleSubmit = (e)=>{
         e.preventDefault();
+        axios.post("http://localhost:3001/tasks",task)
+        setTask(initState)
+        alert("task added");
+        navigate("/alltasks")
     }
 
     return (
