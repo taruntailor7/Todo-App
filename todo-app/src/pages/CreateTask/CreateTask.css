@@ -1,14 +1,22 @@
-.createTaskHeading{
-    text-align: start;
-    margin-left: 20px;
+.createtask{
+    width:40%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 textarea{
-    border-radius: 10px;
+    border-radius: 5px;
     border:1px solid #ccc;
     padding: 10px;
 }
 select{
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     border:1px solid #ccc;
+}
+.createTaskBtn{
+    background: #5876d8;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
 }
