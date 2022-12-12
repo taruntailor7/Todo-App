@@ -6,10 +6,9 @@ export const InProgress = () => {
     const [tasks, setTasks] = useState([])
 
     useEffect(()=>{
-        axios.get("http://localhost:3001/tasks")
+        axios.get("http://localhost:3001/progress")
         .then((response)=>setTasks(response.data))
     },[])
-    console.log(tasks)
     
     return (
         <div className="allTasks">
@@ -21,8 +20,7 @@ export const InProgress = () => {
                         <th>Name</th>
                         <th>Date</th>
                         <th>Category</th>
-                        <th>In-Progress</th>
-                        <th>Delete</th>
+                        <th>Done</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,7 +31,6 @@ export const InProgress = () => {
                             <td>{task.date}</td>
                             <td>{task.category}</td>
                             <td>Move</td>
-                            <td>Delete</td>
                         </tr>
                     ))}
                 </tbody>

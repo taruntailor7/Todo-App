@@ -1,13 +1,6 @@
 {
   "tasks": [
     {
-      "name": "okat",
-      "date": "2022-12-12",
-      "desc": "ojiubu",
-      "category": "personal",
-      "id": 1
-    },
-    {
       "name": "new",
       "date": "2022-12-24",
       "desc": "ecfer",
@@ -23,6 +16,12 @@
     }
   ],
   "progress": [
-
+    {
+      "name": "okat",
+      "date": "2022-12-12",
+      "desc": "ojiubu",
+      "category": "personal",
+      "id": 1
+    }
   ]
 }

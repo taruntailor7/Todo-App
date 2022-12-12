@@ -13,6 +13,16 @@ export const AllTasks = () => {
     const handleChange = (e) =>{
 
     }
+    const handleClick = async (id)=>{
+        try {
+            let task = await axios.get(`http://localhost:3001/tasks/${id}`)
+            // console.log(task.data)
+            axios.post("http://localhost:3001/progress", task.data)
+            axios.delete(`http://localhost:3001/tasks/${id}`)
+        } catch (error) {
+            console.log(error)
+        }   
+    }
     
     return (
         <div className="allTasks">
@@ -41,7 +51,7 @@ export const AllTasks = () => {
                             <td>{task.name}</td>
                             <td>{task.date}</td>
                             <td>{task.category}</td>
-                            <td>Move</td>
+                            <td className="inProgress" onClick={()=>handleClick(task.id)}>Move</td>
                             <td>Delete</td>
                         </tr>
                     ))}
