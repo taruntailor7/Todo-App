@@ -11,7 +11,10 @@ export const AllTasks = () => {
     },[])
 
     const handleChange = (e) =>{
-
+        let value = e.target.value
+        console.log(value)
+        axios.get(`http://localhost:3001/tasks?category=${value}`)
+        .then((response)=>setTasks(response.data))
     }
 
     const handleClick = async (id,index)=>{
@@ -22,7 +25,7 @@ export const AllTasks = () => {
             axios.post("http://localhost:3001/progress", task.data)
             
             axios.delete(`http://localhost:3001/tasks/${id}`)
-            
+
             tasks.splice(index,1)
             setTasks([...tasks])
         } catch (error) {
