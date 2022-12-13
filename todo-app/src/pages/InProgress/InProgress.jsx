@@ -6,18 +6,18 @@ export const InProgress = () => {
     const [tasks, setTasks] = useState([])
 
     useEffect(()=>{
-        axios.get("http://localhost:3001/progress")
+        axios.get("https://data-xgug.onrender.com/progress")
         .then((response)=>setTasks(response.data))
     },[])
 
     const handleClick = async (id,index)=>{
         try {
-            let task = await axios.get(`http://localhost:3001/progress/${id}`)
+            let task = await axios.get(`https://data-xgug.onrender.com/progress/${id}`)
             delete task.data.id;
 
-            axios.post("http://localhost:3001/done", task.data)
+            axios.post("https://data-xgug.onrender.com/done", task.data)
 
-            axios.delete(`http://localhost:3001/progress/${id}`)
+            axios.delete(`https://data-xgug.onrender.com/progress/${id}`)
 
             tasks.splice(index,1)
             setTasks([...tasks])

@@ -21,7 +21,7 @@ export const CreateTask = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        axios.post("http://localhost:3001/tasks",task)
+        axios.post("https://data-xgug.onrender.com/tasks",task)
         setTask(initState)
         alert("task added");
         navigate("/alltasks")

@@ -6,7 +6,7 @@ export const Done = () => {
     const [tasks, setTasks] = useState([])
 
     useEffect(()=>{
-        axios.get("http://localhost:3001/done")
+        axios.get("https://data-xgug.onrender.com/done")
         .then((response)=>setTasks(response.data))
     },[])
     

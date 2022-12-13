@@ -6,25 +6,25 @@ export const AllTasks = () => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(()=>{
-        axios.get(`http://localhost:3001/tasks`)
+        axios.get(`https://data-xgug.onrender.com/tasks`)
         .then((response)=>setTasks(response.data))
     },[])
 
     const handleChange = (e) =>{
         let value = e.target.value
         console.log(value)
-        axios.get(`http://localhost:3001/tasks?category=${value}`)
+        axios.get(`https://data-xgug.onrender.com/tasks?category=${value}`)
         .then((response)=>setTasks(response.data))
     }
 
     const handleClick = async (id,index)=>{
         try {
-            let task = await axios.get(`http://localhost:3001/tasks/${id}`)
+            let task = await axios.get(`https://data-xgug.onrender.com/tasks/${id}`)
             delete task.data.id;
 
-            axios.post("http://localhost:3001/progress", task.data)
+            axios.post("https://data-xgug.onrender.com/progress", task.data)
             
-            axios.delete(`http://localhost:3001/tasks/${id}`)
+            axios.delete(`https://data-xgug.onrender.com/tasks/${id}`)
 
             tasks.splice(index,1)
             setTasks([...tasks])
